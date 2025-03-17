@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+	const images = import.meta.glob('../../assets/images/*.jpg', {
+		eager: true // dodaj eager: true aby otrzymać rzeczywiste obrazy, nie funkcje
+	});
+
+	return Object.entries(images).map(([path, imageModule]) => ({
+		params: { slug: path.split('/').pop().replace('.jpg', '') },
+		props: { image: imageModule.default }
+	}));
+}
+
+const { image } = Astro.props;
+---
+<Layout>
+	<div id="content">
+		<div class="small">
+			<a href="/galeria" title="Wróć do galerii">
+				<Image src={image} alt="" width="830" />
+			</a>
+		</div>
+	</div>
+</Layout>

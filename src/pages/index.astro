@@ -1,12 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
 
+import Layout from '../layouts/Layout.astro';
+import DSC00083 from '../assets/images/DSC00083.jpg';
 ---
 
 <Layout>
-	<div class="small">
-	<a href="http://gajowkapasieki.pl/?p=11" rel="bookmark" title="Pierwsze zdjęcie z pasiek">
-	<img src="http://gajowkapasieki.pl/wp-content/uploads/DSC00083.jpg" alt="Pierwsze zdjęcie z pasiek " /></a>
+	<div id="content">
+		<div class="small">
+			<a href="/informacje" title="Pierwsze zdjęcie z pasiek">
+			<Image src={DSC00083} alt="Pierwsze zdjęcie z pasiek " /></a>
+		</div>
 	</div>
 </Layout>
 

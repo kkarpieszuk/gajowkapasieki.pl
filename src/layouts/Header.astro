@@ -1,10 +1,113 @@
----
-import LogoSection from '../components/LogoSection.astro';
-import TopMenu from '../components/TopMenu.astro';
----
 <div id="header">
-
-	<LogoSection />
-	<TopMenu />
-
+	<div id="headerleft">
+		<h1><a href="/">Gajówka Pasieki</a></h1>
+		<h2>Urocze miejsce w Puszczy Białowieskiej cisza - natura - swoboda - <br />również wędkowanie (2km od zbiornika wodnego Siemianówka)</h2>
+	</div>
+	<div id="headerright">
+		<ul>
+			<li><a href="/galeria">Galeria zdjęć</a></li>
+			<li><a href="/informacje">Informacje</a></li>
+			<li><a href="/kontakt">Kontakt</a></li>
+		</ul>
+	</div>
 </div>
+
+<style>
+/************************************************
+*	Header  									*
+************************************************/
+
+* html #header{ width: 860px; padding: 0px;}
+
+#header {
+	background: #000;
+	color: #333333;
+	font-size: 24px;
+	margin: 0px 0px 10px 0px;
+	padding: 4px 0px 20px 0px;
+	overflow: hidden;
+	border-bottom: 1px solid #333;
+
+	h1 {
+		color: #99cc00;
+		font-size: 24px;
+		font-weight: normal;
+		margin: 0px;
+		padding: 10px 0px 10px 0px;
+		text-decoration: none;
+		background: #000;
+
+		a, a:visited {
+			color: #fff;
+			font-weight: normal;
+			margin: 0px;
+			padding: 0px;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: #99cc00;
+			text-decoration: none;
+		}
+	}
+
+	h2 {
+		color: #99cc00;
+	}
+
+	#headerleft {
+		width: 450px;
+		float: left;
+		font-size: 14px;
+		margin: 0px;
+		padding: 0px 0px 0px 20px;
+		overflow: hidden;
+
+		p {
+			color: #666666;
+			font-size: 15px;
+			font-weight: normal;
+			margin: 0px;
+			padding: 0px 0px 0px 25px;
+			text-decoration: none;
+		}
+	}
+
+	#headerright {
+		width: 350px;
+		float: right;
+		font-size: 12px;
+		text-align: right;
+		margin: 0px;
+		padding: 10px 10px 10px 0px;
+		overflow: hidden;
+
+		p {
+			color: #666666;
+			font-size: 18px;
+			font-weight: normal;
+			margin: 0px;
+			padding: 0px 0px 0px 20px;
+			text-decoration: none;
+		}
+
+		ul {
+			margin: 0px;
+			padding: 4px;
+
+			li {
+				display: inline;
+				list-style-type: none;
+				margin: 0px;
+				padding: 0px;
+
+				a {
+					font-size: 12px;
+					padding: 8px 20px 8px 20px;
+					margin: 0px 0px 0px 0px;
+				}
+			}
+		}
+	}
+}
+</style>
