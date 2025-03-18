@@ -3,6 +3,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config .
 export default defineConfig({
-    site: 'https://kkarpieszuk.github.io/gajowkapasieki.pl/',
+    site: 'http://gajowkapasieki.pl/',
     base: 'gajowkapasieki.pl',
 });
